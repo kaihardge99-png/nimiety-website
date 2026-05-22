@@ -39,3 +39,11 @@ Netlify will publish the site from the project root using `netlify.toml`.
 - Add your domain in Netlify site settings.
 - Update your domain DNS to point to Netlify's nameservers or use the provided DNS records.
 - Wait for DNS propagation, then verify the domain in Netlify.
+
+### Domain configured in this repo
+
+This project includes a `CNAME` file with your domain:
+
+- `m69z7nz5r6-dotcom`
+
+That is useful if you later deploy with GitHub Pages or need a repository-level domain mapping.
