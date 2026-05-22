@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+
+# Node
+node_modules/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

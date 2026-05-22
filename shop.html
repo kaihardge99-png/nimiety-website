@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Nimiety Events</title>
+  <meta name="description" content="Shop Nimiety Events merch, including tees, tote bags, and stickers. Add items to cart and complete your order request." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-icon"><img src="assets/logo.svg" alt="Nimiety Events logo"></span>Nimiety Events</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="artists.html">Artists</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#footer">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Shop</p>
+        <h1>Grab limited Nimiety merch.</h1>
+        <p>Support the collective with exclusive merch drops before the next event sells out.</p>
+      </div>
+    </section>
+
+    <section class="shop-section">
+      <div class="container shop-grid">
+        <article class="product-card" data-name="Nimiety Logo T-Shirt" data-price="35">
+          <div>
+            <div class="artist-avatar">T</div>
+            <h3>Nimiety Logo T-Shirt</h3>
+            <p>Premium black tee with bold logo print, perfect for the underground crowd.</p>
+          </div>
+          <div class="product-price">$35.00</div>
+          <button class="add-to-cart">Add to cart</button>
+        </article>
+
+        <article class="product-card" data-name="Secret Drop Tote" data-price="22">
+          <div>
+            <div class="artist-avatar">B</div>
+            <h3>Secret Drop Tote</h3>
+            <p>Heavy canvas tote bag with subtle Nimiety branding and street-ready style.</p>
+          </div>
+          <div class="product-price">$22.00</div>
+          <button class="add-to-cart">Add to cart</button>
+        </article>
+
+        <article class="product-card" data-name="Sticker Pack" data-price="12">
+          <div>
+            <div class="artist-avatar">S</div>
+            <h3>Sticker Pack</h3>
+            <p>8-piece sticker set for laptops, cases, and visuals. Limited run artwork.</p>
+          </div>
+          <div class="product-price">$12.00</div>
+          <button class="add-to-cart">Add to cart</button>
+        </article>
+      </div>
+
+      <aside class="cart-panel">
+        <h3>Your cart</h3>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <p class="cart-notice">Add an item and then checkout to request an order link.</p>
+        <button id="checkout-button" class="cta-button">Checkout</button>
+        <form id="checkout-form" class="checkout-form hidden">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="3" placeholder="Shipping or pickup details"></textarea>
+          </label>
+          <button type="submit">Send order request</button>
+          <p class="checkout-message"></p>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-icon"><img src="assets/logo.svg" alt="Nimiety Events logo"></span>Nimiety Events</a>
+        <p>Underground electronic music collective. Events, artists, and merch made for the city.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="artists.html">Artists</a>
+      </div>
+      <div>
+        <h4>Questions</h4>
+        <p>hello@nimiety.events</p>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Nimiety Events — built for the underground scene.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
