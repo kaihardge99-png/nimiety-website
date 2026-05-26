@@ -1,5 +1,7 @@
 # Nimiety Events
 
+[![Deploy to Netlify](https://img.shields.io/badge/deploy-netlify-00C7B7?logo=netlify&logoColor=white)](https://m69z7nz5r6-dotcom.netlify.app)
+
 A static multi-page website for an underground electronic music collective.
 
 ## Included pages
