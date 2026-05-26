@@ -20,18 +20,19 @@ if (contactForm) {
     event.preventDefault();
     const formData = new FormData(contactForm);
     const endpoint = contactForm.action || '/';
+    
     fetch(endpoint, {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
       body: formData,
     })
       .then((res) => {
         if (res.ok) {
           responseText.textContent = 'Thanks — your message was sent. We will reply to the email you provided.';
           contactForm.reset();
-        } else {
-          return res.json().then((data) => Promise.reject(data));
+          contactForm.style.display = 'none';
+          return;
         }
+        throw new Error('Form submission failed');
       })
       .catch((error) => {
         console.error('Form submit error:', error);
