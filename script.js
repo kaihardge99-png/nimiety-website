@@ -19,40 +19,24 @@ if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(contactForm);
-    const formspreeEndpoint = contactForm.dataset.formspreeEndpoint;
-    if (formspreeEndpoint) {
-      fetch(formspreeEndpoint, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData,
-      })
-        .then((res) => {
-          if (res.ok) {
-            responseText.textContent = 'Thanks — your message was sent. We will reply to the email you provided.';
-            contactForm.reset();
-          } else {
-            return res.json().then((data) => Promise.reject(data));
-          }
-        })
-        .catch((error) => {
-          console.error('Formspree submit error:', error);
-          responseText.textContent = 'Sorry — there was a problem sending your message. You can also email us at nimiety.sydney@gmail.com.';
-        });
-    } else {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(() => {
+    const endpoint = contactForm.action || '/';
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData,
+    })
+      .then((res) => {
+        if (res.ok) {
           responseText.textContent = 'Thanks — your message was sent. We will reply to the email you provided.';
           contactForm.reset();
-        })
-        .catch((error) => {
-          console.error('Form submit error:', error);
-          responseText.textContent = 'Sorry — there was a problem sending your message. You can also email us at nimiety.sydney@gmail.com.';
-        });
-    }
+        } else {
+          return res.json().then((data) => Promise.reject(data));
+        }
+      })
+      .catch((error) => {
+        console.error('Form submit error:', error);
+        responseText.textContent = 'Sorry — there was a problem sending your message. You can also email us at nimiety.sydney@gmail.com.';
+      });
   });
 }
 
