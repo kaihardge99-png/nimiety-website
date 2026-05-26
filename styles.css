@@ -648,3 +648,130 @@ textarea::placeholder {
     padding-top: 5rem;
   }
 }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form-wrapper h2 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.contact-form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-form-wrapper label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(168, 85, 247, 0.08);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.contact-form-wrapper textarea {
+  resize: vertical;
+  min-height: 8rem;
+  font-family: inherit;
+}
+
+.form-response {
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  color: var(--accent-alt);
+  text-align: center;
+  min-height: 1.5rem;
+  display: none;
+}
+
+.form-response:not(:empty) {
+  display: block;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info h2 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.contact-block {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-block h3 {
+  margin: 0 0 0.8rem 0;
+  color: var(--accent);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-block p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contact-block a {
+  color: var(--accent-alt);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.3);
+  transition: all 0.2s ease;
+}
+
+.contact-block a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-section {
+    padding: 2rem 0;
+  }
+}
