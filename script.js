@@ -29,9 +29,10 @@ if (contactForm) {
         if (res.ok) {
           responseText.textContent = 'Thanks — your message was sent. We will reply to the email you provided.';
           contactForm.reset();
-        } else {
-          return res.json().then((data) => Promise.reject(data));
+          contactForm.style.display = 'none';
+          return;
         }
+        return res.json().then((data) => Promise.reject(data));
       })
       .catch((error) => {
         console.error('Form submit error:', error);
