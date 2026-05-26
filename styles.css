@@ -386,11 +386,11 @@ button[type="submit"]:hover {
 }
 
 .embed-wrapper iframe {
-  min-height: 0;
+  min-height: 520px;
   width: 100%;
   border: 0;
   border-radius: 1.2rem;
-  background: #000;
+  background: transparent;
 }
 
 .soundcloud-embed iframe {

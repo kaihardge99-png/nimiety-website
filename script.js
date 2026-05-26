@@ -18,8 +18,20 @@ const responseText = document.querySelector('.form-response');
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    responseText.textContent = 'Thanks! Your message is ready to send.';
-    contactForm.reset();
+    const formData = new FormData(contactForm);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        responseText.textContent = 'Thanks — your message was sent. We will reply to the email you provided.';
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('Form submit error:', error);
+        responseText.textContent = 'Sorry — there was a problem sending your message. You can also email us at nimiety.sydney@gmail.com.';
+      });
   });
 }
 

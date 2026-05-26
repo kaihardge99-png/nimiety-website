@@ -25,6 +25,11 @@ Open `index.html` in a browser to preview the site locally.
 
 This site can be hosted on static hosting services such as GitHub Pages, Netlify, Vercel, or any static web host.
 
+## Live on Netlify
+
+- Production URL: `https://m69z7nz5r6-dotcom.netlify.app`
+- Netlify admin: `https://app.netlify.com/projects/m69z7nz5r6-dotcom`
+
 ## Deploying to Netlify
 
 1. Create a GitHub repository and push this project.
